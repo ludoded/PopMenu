@@ -11,7 +11,10 @@ let package = Package(
     targets: [
         .target(
             name: "PopMenu",
-            path: "PopMenu"
+            path: "PopMenu",
+            swiftSettings: [
+                .unsafeFlags(["-suppress-warnings"]),
+            ]
         ),
         .testTarget(
             name: "PopMenuTests",
